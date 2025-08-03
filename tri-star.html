@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRI-STAR CATERING - Premium Catering Services</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#d4af37",
+              secondary: "#1a1a1a",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+      }
+      .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          135deg,
+          rgba(26, 26, 26, 0.7) 0%,
+          rgba(26, 26, 26, 0.4) 100%
+        );
+      }
+
+      /* Mobile Responsive Media Queries */
+      @media (max-width: 768px) {
+        /* Reduced container padding */
+        .max-w-7xl {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+
+        /* Reduced section padding */
+        .py-20 {
+          padding-top: 3rem !important;
+          padding-bottom: 3rem !important;
+        }
+
+        .py-16 {
+          padding-top: 2rem !important;
+          padding-bottom: 2rem !important;
+        }
+
+        /* Reduced margins */
+        .mb-16 {
+          margin-bottom: 2rem !important;
+        }
+
+        .mb-8 {
+          margin-bottom: 1.5rem !important;
+        }
+
+        .mb-6 {
+          margin-bottom: 1rem !important;
+        }
+
+        .mb-4 {
+          margin-bottom: 0.75rem !important;
+        }
+
+        /* Reduced text sizes */
+        .text-6xl {
+          font-size: 2.5rem !important;
+          line-height: 1.2 !important;
+        }
+
+        .text-7xl {
+          font-size: 3rem !important;
+          line-height: 1.1 !important;
+        }
+
+        .text-8xl {
+          font-size: 3.5rem !important;
+          line-height: 1.1 !important;
+        }
+
+        .text-4xl {
+          font-size: 1.875rem !important;
+          line-height: 1.3 !important;
+        }
+
+        .text-2xl {
+          font-size: 1.5rem !important;
+          line-height: 1.4 !important;
+        }
+
+        .text-xl {
+          font-size: 1.125rem !important;
+          line-height: 1.5 !important;
+        }
+
+        /* Reduced button padding */
+        .px-8 {
+          padding-left: 1.5rem !important;
+          padding-right: 1.5rem !important;
+        }
+
+        .py-4 {
+          padding-top: 0.75rem !important;
+          padding-bottom: 0.75rem !important;
+        }
+
+        /* Reduced grid gaps */
+        .gap-8 {
+          gap: 1.5rem !important;
+        }
+
+        .gap-6 {
+          gap: 1rem !important;
+        }
+
+        /* Reduced card padding */
+        .p-8 {
+          padding: 1.5rem !important;
+        }
+
+        /* Reduced icon sizes */
+        .w-16 {
+          width: 3rem !important;
+        }
+
+        .h-16 {
+          height: 3rem !important;
+        }
+
+        .text-2xl {
+          font-size: 1.25rem !important;
+        }
+
+        /* Reduced header height */
+        .h-20 {
+          height: 4rem !important;
+        }
+
+        /* Reduced logo size */
+        .w-16.h-16 {
+          width: 3rem !important;
+          height: 3rem !important;
+        }
+
+        /* Reduced spacing in navigation */
+        .space-x-8 {
+          column-gap: 1.5rem !important;
+        }
+
+        /* Reduced footer spacing */
+        .space-y-2 {
+          row-gap: 0.5rem !important;
+        }
+
+        .space-y-3 {
+          row-gap: 0.75rem !important;
+        }
+
+        /* Reduced aspect ratios for better mobile viewing */
+        .aspect-square {
+          aspect-ratio: 4/3 !important;
+        }
+      }
+
+      /* Extra small devices */
+      @media (max-width: 480px) {
+        .max-w-7xl {
+          padding-left: 0.75rem !important;
+          padding-right: 0.75rem !important;
+        }
+
+        .py-20 {
+          padding-top: 2rem !important;
+          padding-bottom: 2rem !important;
+        }
+
+        .py-16 {
+          padding-top: 1.5rem !important;
+          padding-bottom: 1.5rem !important;
+        }
+
+        .mb-16 {
+          margin-bottom: 1.5rem !important;
+        }
+
+        .mb-8 {
+          margin-bottom: 1rem !important;
+        }
+
+        .mb-6 {
+          margin-bottom: 0.75rem !important;
+        }
+
+        .mb-4 {
+          margin-bottom: 0.5rem !important;
+        }
+
+        .text-6xl {
+          font-size: 2rem !important;
+        }
+
+        .text-7xl {
+          font-size: 2.5rem !important;
+        }
+
+        .text-8xl {
+          font-size: 3rem !important;
+        }
+
+        .text-4xl {
+          font-size: 1.5rem !important;
+        }
+
+        .text-2xl {
+          font-size: 1.25rem !important;
+        }
+
+        .px-8 {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+
+        .py-4 {
+          padding-top: 0.5rem !important;
+          padding-bottom: 0.5rem !important;
+        }
+
+        .gap-8 {
+          gap: 1rem !important;
+        }
+
+        .gap-6 {
+          gap: 0.75rem !important;
+        }
+
+        .p-8 {
+          padding: 1rem !important;
+        }
+
+        .w-16 {
+          width: 2.5rem !important;
+        }
+
+        .h-16 {
+          height: 2.5rem !important;
+        }
+
+        .h-20 {
+          height: 3.5rem !important;
+        }
+
+        .w-16.h-16 {
+          width: 2.5rem !important;
+          height: 2.5rem !important;
+        }
+
+        .space-x-8 {
+          column-gap: 1rem !important;
+        }
+
+        .space-y-2 {
+          row-gap: 0.25rem !important;
+        }
+
+        .space-y-3 {
+          row-gap: 0.5rem !important;
+        }
+
+        .aspect-square {
+          aspect-ratio: 1/1 !important;
+        }
+
+        /* Hero section button fixes */
+        .text-center {
+          text-align: center !important;
+        }
+
+        /* Ensure buttons don't overflow on mobile */
+        button {
+          word-wrap: break-word !important;
+          overflow-wrap: break-word !important;
+        }
+
+        /* Hero button text reduction for mobile */
+        .text-lg {
+          font-size: 0.875rem !important;
+        }
+
+        /* Specific hero button text reduction */
+        .hero-button-text {
+          font-size: 0.75rem !important;
+          line-height: 1.2 !important;
+        }
+
+        /* Extra small devices - even smaller hero button text */
+        @media (max-width: 480px) {
+          .hero-button-text {
+            font-size: 0.625rem !important;
+            line-height: 1.1 !important;
+          }
+
+          .text-lg {
+            font-size: 0.75rem !important;
+          }
+        }
+      }
+
+      /* Tablet specific adjustments */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .py-20 {
+          padding-top: 4rem !important;
+          padding-bottom: 4rem !important;
+        }
+
+        .py-16 {
+          padding-top: 3rem !important;
+          padding-bottom: 3rem !important;
+        }
+
+        .mb-16 {
+          margin-bottom: 3rem !important;
+        }
+
+        .mb-8 {
+          margin-bottom: 2rem !important;
+        }
+
+        .mb-6 {
+          margin-bottom: 1.5rem !important;
+        }
+
+        .mb-4 {
+          margin-bottom: 1rem !important;
+        }
+
+        .gap-8 {
+          gap: 2rem !important;
+        }
+
+        .gap-6 {
+          gap: 1.5rem !important;
+        }
+
+        .p-8 {
+          padding: 2rem !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-['Inter'] bg-white">
+    <!-- Promotional Banner -->
+    <!-- <div class="bg-primary text-secondary py-3 text-center text-sm font-medium">
+      <div class="flex items-center justify-center gap-2">
+        <div class="w-4 h-4 flex items-center justify-center">
+          <i class="ri-gift-line text-secondary"></i>
+        </div>
+        Try our new online ordering and enjoy a 20% discount on your first order
+        <div class="w-4 h-4 flex items-center justify-center">
+          <i class="ri-gift-line text-secondary"></i>
+        </div>
+      </div>
+    </div> -->
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div
+              class="bg-secondary rounded-md w-16 h-16 flex items-center justify-center mr-4"
+            >
+              <img src="./assets/logo.png" alt="Tri-Star Catering" />
+            </div>
+            <div>
+              <h1 class="font-['Pacifico'] text-2xl text-secondary">
+                TRI-STAR
+              </h1>
+              <p class="text-sm text-gray-600 -mt-1">CATERING</p>
+            </div>
+          </div>
+          <!-- Navigation -->
+          <nav class="hidden lg:flex items-center space-x-8">
+            <div class="dropdown relative">
+              <button
+                class="flex items-center gap-1 text-gray-700 hover:text-primary transition-colors font-medium"
+              >
+                Menu
+                <div class="w-4 h-4 flex items-center justify-center">
+                  <i class="ri-arrow-down-s-line text-sm"></i>
+                </div>
+              </button>
+              <div
+                class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border py-2"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                  >Spring Menu 2025</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                  >Breakfast</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                  >Sandwiches and Salads</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                  >Hot Buffets</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                  >Desserts and Drinks</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                  >Boards and More</a
+                >
+              </div>
+            </div>
+            <div class="dropdown relative">
+              <button
+                class="flex items-center gap-1 text-gray-700 hover:text-primary transition-colors font-medium"
+              >
+                Services
+                <div class="w-4 h-4 flex items-center justify-center">
+                  <i class="ri-arrow-down-s-line text-sm"></i>
+                </div>
+              </button>
+              <div
+                class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border py-2"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                  >Corporate Catering</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                  >Private Events</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                  >Gather for the Games</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                  >Pick A Party</a
+                >
+              </div>
+            </div>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >About</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-primary transition-colors font-medium"
+              >Contact</a
+            >
+          </nav>
+          <!-- Right Actions -->
+          <div class="flex items-center space-x-4">
+            <button
+              class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+            >
+              <i class="ri-user-line text-xl"></i>
+            </button>
+            <button
+              class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-600"
+            >
+              <i class="ri-menu-line text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center"
+      style="background-image: url('./assets/images/meals/hero.jpg')"
+    >
+      <div class="hero-overlay absolute inset-0"></div>
+      <div class="relative z-10 w-full">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="max-w-3xl">
+            <h1
+              class="text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
+            >
+              TRI-STAR<br />
+              <span class="text-primary">CATERING</span>
+            </h1>
+            <p class="text-2xl text-gray-200 mb-8 leading-relaxed max-w-2xl">
+              Making all things pertaining to food and dining pleasurable with
+              our premium catering services and exceptional culinary
+              experiences.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button
+                class="bg-primary text-secondary px-8 py-4 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all text-center hero-button-text"
+              >
+                NEW ONLINE ORDERING!<br class="sm:hidden" />
+                20% OFF YOUR FIRST ORDER
+              </button>
+              <button
+                class="border-2 border-white text-white px-8 py-4 !rounded-button font-semibold text-lg hover:bg-white hover:text-secondary transition-all text-center hero-button-text"
+              >
+                View Our Menu
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-secondary mb-4">
+            Our Premium Services
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From corporate events to intimate gatherings, we deliver exceptional
+            culinary experiences tailored to your needs.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-building-line text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-secondary mb-4">
+              Corporate Catering
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Professional catering services for business meetings, conferences,
+              and corporate events with customized menu options.
+            </p>
+            <button
+              class="text-primary font-semibold hover:text-secondary transition-colors"
+            >
+              Learn More →
+            </button>
+          </div>
+          <div
+            class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-heart-line text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-secondary mb-4">
+              Private Events
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Elegant catering for weddings, anniversaries, birthdays, and
+              special celebrations with personalized service.
+            </p>
+            <button
+              class="text-primary font-semibold hover:text-secondary transition-colors"
+            >
+              Learn More →
+            </button>
+          </div>
+          <div
+            class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="ri-football-line text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-secondary mb-4">
+              Game Day Catering
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Perfect for sports events and game watching parties with
+              crowd-pleasing appetizers and comfort food favorites.
+            </p>
+            <button
+              class="text-primary font-semibold hover:text-secondary transition-colors"
+            >
+              Learn More →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Past & Present Clients -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-secondary mb-4">
+            Some of Our Clients, Past & Present!
+          </h2>
+          <p class="text-xl text-gray-600">
+            Trusted by leading companies across industries
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center"
+        >
+          <div
+            class="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="./assets/images/clients/ac_hotels.webp"
+              alt="Client Logo"
+              class="max-h-12 w-auto"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="./assets/images/clients/catalyst.webp"
+              alt="Client Logo"
+              class="max-h-12 w-auto"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="./assets/images/clients/center_on_halls.webp"
+              alt="Client Logo"
+              class="max-h-12 w-auto"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="./assets/images/clients/cr.webp"
+              alt="Client Logo"
+              class="max-h-12 w-auto"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="./assets/images/clients/lmg.webp"
+              alt="Client Logo"
+              class="max-h-12 w-auto"
+            />
+          </div>
+          <div
+            class="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="./assets/images/clients/M_col.webp"
+              alt="Client Logo"
+              class="max-h-12 w-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our History -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <img
+              src="./assets/images/meals/history.jpg"
+              alt="Catering Service"
+              class="w-full rounded-xl shadow-lg"
+            />
+          </div>
+          <div class="order-1 lg:order-2">
+            <h2 class="text-4xl font-bold text-secondary mb-6">Our History</h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Founded in 1996 by two friends, Robert Procell and Glenn Tisdall,
+              with a long history in restaurant operations and kitchen
+              management, Tri-Star Catering has grown into more than exceptional
+              food, tastefully presented.
+            </p>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              Whether you're planning a 250 person cocktail party or a 50 person
+              brunch, we commit to helping create your perfect event while
+              staying aware of your budget. Our team is excited to help with
+              every aspect of planning your perfect event.
+            </p>
+            <button
+              class="bg-primary text-secondary px-8 py-4 !rounded-button font-semibold hover:bg-opacity-90 transition-all whitespace-nowrap"
+            >
+              Connect With Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Corporate Meal Programs -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-4xl font-bold text-secondary mb-6">
+              Corporate Meal Programs
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Increase productivity and morale among your employees by showing
+              your care. We have fully customizable breakfast, lunch, dinner,
+              and snack programs tailored to meet all their dietary needs.
+            </p>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              You can count on us to always be on time with our delicious food!
+            </p>
+            <button
+              class="bg-primary text-secondary px-8 py-4 !rounded-button font-semibold hover:bg-opacity-90 transition-all whitespace-nowrap"
+            >
+              Learn More
+            </button>
+          </div>
+          <div>
+            <img
+              src="./assets/images/meals/smp.jpg"
+              alt="Corporate Meal Programs"
+              class="w-full rounded-xl shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Menu Highlights -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-2xl font-semibold text-secondary mb-4">
+                Film and Production Catering
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Let us take care of all your craft service, crew meals,
+                specialized needs, and logistics. From simple snacks and meals
+                to elegantly appointed themed buffets, Tri-Star Catering takes
+                the work and worry out of your planning process. We know the
+                importance of a happy cast and crew, along with the importance
+                of punctuality.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-secondary mb-4">
+                Social Events
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Private parties, weddings, showers, birthdays, special events.
+                You name it, we cater to it! Our menus offer examples of our
+                creativity however, let us craft a menu with your input and
+                preferences. We take pride in creating the complete and perfect
+                function or social event. Guaranteed that the food will be the
+                life of the party...second to you, of course.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <img
+              src="./assets/images/meals/fpc.jpg"
+              alt="Film Catering"
+              class="w-full h-full object-cover rounded-xl"
+            />
+            <img
+              src="./assets/images/meals/se.jpg"
+              alt="Social Events"
+              class="w-full h-full object-cover rounded-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Menu Highlights -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-secondary mb-4">
+            Featured Menu Items
+          </h2>
+          <p class="text-xl text-gray-600">
+            Discover our most popular dishes crafted with the finest ingredients
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="group">
+            <div class="aspect-square rounded-xl overflow-hidden mb-4">
+              <img
+                src="./assets/images/meals/premium_breakfast.jpg"
+                alt="Breakfast Menu"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <h3 class="text-xl font-semibold text-secondary mb-2">
+              Premium Breakfast
+            </h3>
+            <p class="text-gray-600">
+              Fresh pastries, seasonal fruits, and artisanal coffee selections
+            </p>
+          </div>
+          <div class="group">
+            <div class="aspect-square rounded-xl overflow-hidden mb-4">
+              <img
+                src="./assets/images/meals/gs.jpg"
+                alt="Sandwiches & Salads"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <h3 class="text-xl font-semibold text-secondary mb-2">
+              Gourmet Sandwiches
+            </h3>
+            <p class="text-gray-600">
+              Artisanal sandwiches and fresh salads with premium ingredients
+            </p>
+          </div>
+          <div class="group">
+            <div class="aspect-square rounded-xl overflow-hidden mb-4">
+              <img
+                src="./assets/images/meals/hb.jpg"
+                alt="Hot Buffets"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <h3 class="text-xl font-semibold text-secondary mb-2">
+              Hot Buffets
+            </h3>
+            <p class="text-gray-600">
+              Warm, comforting dishes served at perfect temperature
+            </p>
+          </div>
+          <div class="group">
+            <div class="aspect-square rounded-xl overflow-hidden mb-4">
+              <img
+                src="./assets/images/meals/db.jpg"
+                alt="Desserts & Drinks"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <h3 class="text-xl font-semibold text-secondary mb-2">
+              Desserts & Beverages
+            </h3>
+            <p class="text-gray-600">
+              Artisanal desserts and premium beverage selections
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-20 bg-secondary relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <img
+          src="./assets/images/meals/cta.jpg"
+          alt="Catering Background"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto text-center px-6">
+        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+          Ready to Create Your Perfect Event?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Let our experienced team handle every detail while you focus on what
+          matters most - your guests and your celebration.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            class="bg-primary text-secondary px-8 py-4 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all whitespace-nowrap"
+          >
+            Start Your Order
+          </button>
+          <button
+            class="border-2 border-primary text-primary px-8 py-4 !rounded-button font-semibold text-lg hover:bg-primary hover:text-secondary transition-all whitespace-nowrap"
+          >
+            Get Free Quote
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-white py-16 border-t">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center mb-6">
+              <div
+                class="bg-secondary rounded-full w-12 h-12 flex items-center justify-center mr-3"
+              >
+                <img src="./assets/logo.png" alt="" />
+              </div>
+              <div>
+                <h3 class="font-['Pacifico'] text-lg text-secondary">
+                  TRI-STAR
+                </h3>
+                <p class="text-xs text-gray-600 -mt-1">CATERING</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Making all things pertaining to food and dining pleasurable with
+              exceptional catering services.
+            </p>
+            <div class="flex space-x-4">
+              <div
+                class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </div>
+              <div
+                class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+              >
+                <i class="ri-instagram-fill"></i>
+              </div>
+              <div
+                class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+              >
+                <i class="ri-twitter-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-secondary mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Corporate Catering</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Private Events</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Wedding Catering</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Game Day Parties</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-secondary mb-4">Menu</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Breakfast Options</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Lunch Packages</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Dinner Selections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Dessert Menu</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-secondary mb-4">Contact Info</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-phone-line"></i>
+                </div>
+                <a href="tel:8338722968" class="text-gray-600">
+                  (833) 872-2968
+                </a>
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-600">info@tristarcatering.com</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary mt-0.5"
+                >
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-600"
+                  >123 Culinary Street<br />Gourmet City, GC 12345</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-600 text-sm">
+            © 2025 TRI-STAR CATERING. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-600 hover:text-primary transition-colors text-sm"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-600 hover:text-primary transition-colors text-sm"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script id="dropdown-functionality">
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll(".dropdown");
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector("button");
+          const menu = dropdown.querySelector(".dropdown-menu");
+          let timeout;
+          dropdown.addEventListener("mouseenter", () => {
+            clearTimeout(timeout);
+            menu.style.opacity = "1";
+            menu.style.visibility = "visible";
+            menu.style.transform = "translateY(0)";
+          });
+          dropdown.addEventListener("mouseleave", () => {
+            timeout = setTimeout(() => {
+              menu.style.opacity = "0";
+              menu.style.visibility = "hidden";
+              menu.style.transform = "translateY(-10px)";
+            }, 150);
+          });
+        });
+      });
+    </script>
+    <script id="mobile-menu-toggle">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.querySelector(".lg\\:hidden button");
+        const navigation = document.querySelector("nav");
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener("click", function () {
+            navigation.classList.toggle("hidden");
+          });
+        }
+      });
+    </script>
+    <script id="carousel-functionality">
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".client-carousel");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        if (carousel && prevBtn && nextBtn) {
+          let position = 0;
+          const slideWidth = 200;
+          const totalSlides = 1;
+          const maxPosition = -(totalSlides - 1) * slideWidth;
+          function updateCarousel() {
+            carousel.style.transform = `translateX(${position}px)`;
+          }
+          prevBtn.addEventListener("click", () => {
+            position = Math.min(position + slideWidth, 0);
+            updateCarousel();
+          });
+          nextBtn.addEventListener("click", () => {
+            position = Math.max(position - slideWidth, maxPosition);
+            updateCarousel();
+          });
+          setInterval(() => {
+            position = position <= maxPosition ? 0 : position - slideWidth;
+            updateCarousel();
+          }, 3000);
+        }
+      });
+    </script>
+  </body>
+</html>
